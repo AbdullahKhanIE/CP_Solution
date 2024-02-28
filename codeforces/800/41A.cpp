@@ -3,7 +3,7 @@ using namespace std;
 
 int main(){
 
-    string words, rev, wordt;
+    string words, wordt;
     cin>>words>>wordt;
     int length = words.length();
 
