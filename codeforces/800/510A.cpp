@@ -2,20 +2,35 @@
 using namespace std;
 
 int main() {
-    
-    int x,y;
-    cin>>x>>y;
-    
+
+    int x, y;
+    cin >> x >> y;
+    int state = 0;
+
     for (int i = 0; i < x; i++) {
-        for (int j = 0; j < y; j++) {
-            if (i%2==0) { 
-                cout<<"#"; 
+        if (i % 2 == 0) {
+            for (int j = 0; j < y; j++) {
+                cout << "#";
             }
-            else { 
-                cout<<"."; 
+        } 
+        else {
+            if (state == y-1) {
+                state = 0;
+            }
+            else {
+                state = y-1;
+            }
+            for (int j = 0; j < y; j++) { 
+                if (state == j) {
+                    cout << "#";
+                }
+                else {
+                    cout << ".";
+                }
             }
         }
-        cout<<endl;
+        cout << endl;
     }
     return 0;
 }
+
