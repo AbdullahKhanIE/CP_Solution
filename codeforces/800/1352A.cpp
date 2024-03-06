@@ -2,45 +2,42 @@
 using namespace std;
 
 int main(){
-    int  x, n;
+
+    int n, input;
     cin>>n;
+
     while (n--) {
-        int input,count=0, print = 0;
         cin>>input;
-        if (input>=100) {
-            x = input/100;
-            count+= x;
-            input-=100*x;
-            print++;
-
-        } 
-        if (input >= 20) {
-            x = input/20;
-            count+= x;
-            input-=20*x;
-            print++;
+        int a=input/1000, b=(input/100)%10, c=(input%100)/10, d=input%10, count =0;
+        if (c!=0) {
+            count++;
+            c*=10;
         }
-        if (input >= 10) {
-            x = input/10;
-            count+= x;
-            input-=10*x;
-            print++;
+        if (b!=0) {
+            count++;
+            b*=100;
         }
-        if (input >= 5) {
-            x = input/5;
-            count+= x;
-            input-=5*x;
-            print++;
+        if (a!=0) {
+            count++;
+            a*=1000;
         }
-        if (input > 0){
-            count+= input;
-            print++;
+        if (d!=0) {
+            count++;
         }
-        cout<<print<<endl;
-        continue;
-    }
-
-    
-    
+        cout<<count<<endl;
+        if (b!=0) {
+            cout<<b<<" ";
+        }
+        if (c!=0) {
+            cout<<c<<" ";
+        }
+        if (d!=0) {
+            cout<<d<<" ";
+        }
+        if (a!=0) {
+            cout<<a<<" ";
+        }
+        cout<<endl;
+    }           
     return 0;
 }

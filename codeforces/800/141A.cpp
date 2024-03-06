@@ -1,19 +1,26 @@
-#include <cstring>
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main(){
-    int n = 200;
-    char one[n],two[n], sum[n];   
-    cin>>one>>two>>sum;
-    if (strlen(one)<=100) {
-        strcat(one, two);
-        if (strcmp(one, sum) == 0){
+    
+    string a,b,c;
+    cin>>a>>b>>c;
+    a+=b;
+
+    if (a.length() == c.length()) {
+        sort(a.begin(),a.end());
+        sort(c.begin(),c.end());
+        if (a==c) {
             cout<<"YES"<<endl;
         }
         else {
-        cout<<"NO"<<endl;
+            cout<<"NO"<<endl;
         }
     }
+    else {
+        cout<<"NO"<<endl;
+    }
+
     return 0;
 }
+
