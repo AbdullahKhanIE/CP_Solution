@@ -1,5 +1,4 @@
 //https://codeforces.com/problemset/gymProblem/464282/A
-
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -17,8 +16,6 @@ int main() {
     while (b--) {
         cout<<ta;
     }
-
-
     return 0;
 }
 
