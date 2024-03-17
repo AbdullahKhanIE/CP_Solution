@@ -7,8 +7,12 @@ int main(){
     while (t--) {
         int m,c;
         cin>>m>>c;
-        mishka+=m;
-        chris+=c;
+        if (m>c) {
+            mishka++;;
+        }
+        else if (c>m) {
+            chris++;
+        }
     }
     if (mishka==chris) {
         cout<<"Friendship is magic!^^"<<endl;
